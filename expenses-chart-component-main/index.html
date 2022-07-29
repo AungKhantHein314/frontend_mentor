@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+  <main>
+
+    <section class="balance" id="balance">
+      <div class="dataBalance" id="dataBalance">
+        <h1>My balance</h1>
+        <h2>$ 4000</h2>
+      </div>
+      <div class="mode" onclick=handleMode()>
+        <div class="moon"><i class="large material-icons">brightness_2</i></div>
+        <div class="sun"><i class="large material-icons">wb_sunny</i></div>
+        <div class="circle" id="circle"></div>
+      </div>
+    </section>
+
+    <section class="chart" id="chart">
+      <div class="wrap">
+        <div class="info" id="info">
+          <h1>Spending - Last 7 days</h1>
+        </div>
+
+        <article class="canvas">
+          <div class="data">
+            <div class="showData" id="mon"></div>
+            <p class="day">mon</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="tue"></div>
+            <p class="day">tue</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="wed"></div>
+            <p class="day">wed</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="thu"></div>
+            <p class="day">thu</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="fri"></div>
+            <p class="day">fri</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="sat"></div>
+            <p class="day">sat</p>
+          </div>
+          <div class="data">
+            <div class="showData" id="sun"></div>
+            <p class="day">sun</p>
+          </div>
+        </article>
+
+        <hr>
+
+        <div class="conclusion" id="conclusion">
+          <div class="total">
+            <h3>Total this month</h3>
+            <h1><strong>$ <span id="totalAmount"></span></strong></h1>
+          </div>
+          <div class="compare">
+            <br>
+            <h3>+4.2%</h3>
+            <h1><strong>From Last Month</strong></h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <br><br><br>
+    <div id="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Aung Khant Hein</a>.
+    </div>
+  </main>
+
+</body>
+<script src="script.js"></script>
+
+</html>
