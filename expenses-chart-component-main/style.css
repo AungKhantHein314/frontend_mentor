@@ -16,6 +16,8 @@ body {
 
 main {
   width: 500px;
+  /* overflow: scroll; */
+  position: absolute;
 }
 
 .balance {
@@ -115,6 +117,16 @@ main {
   align-items: center;
 }
 
+.showDataOnHover {
+  background-color: rgb(41, 34, 34);
+  color: wheat;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 3px;
+  visibility: hidden;
+}
+
 .showData {
   width: 100%;
   height: 20%;
@@ -129,4 +141,126 @@ main {
   color: white;
   padding: 0 5px 5px 5px;
   line-height: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 400px;
+  }
+
+  .data{
+    width: 45px;
+  }
+
+  .sun, .moon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sun i, .moon i {
+    font-size: 30px;
+  }
+
+  .mode {
+    height: 44px;
+    width: 84px;
+  }
+
+  .circle {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  main {
+    width: 350px;
+  }
+
+  .data{
+    width: 35px;
+  }
+
+  .conclusion {
+    font-size: smaller;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  main {
+    width: 300px;
+  }
+
+  .data{
+    width: 30px;
+  }
+
+  .conclusion {
+    font-size: x-small;
+  }
+
+  .info, .balance, .canvas {
+    font-size: small;
+  }
+
+  .balance {
+    height: 120px;
+  }
+
+  #attribution {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  main {
+    min-width: 250px;
+  }
+
+  .data{
+    width: 27px;
+  }
+
+  .conclusion {
+    font-size: x-small;
+  }
+
+  .info {
+    font-size: smaller;
+    margin-left: 10px;
+  }
+
+  .canvas {
+    font-size: x-small;
+    padding: 10px 3px;
+  }
+
+  .balance {
+    margin-left: 2px;
+    font-size: small;
+    height: 120px;
+  }
+
+  #attribution {
+    font-size: small;
+  }
+
+  .sun, .moon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sun i, .moon i {
+    font-size: 20px;
+  }
+
+  .mode {
+    height: 35px;
+    width: 73px;
+  }
+
+  .circle {
+    width: 32px;
+    height: 32px;
+  }
 }

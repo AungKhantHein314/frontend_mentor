@@ -1,9 +1,10 @@
 const maxAmount = 70;
 
+const DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const date = new Date();
+const DAY = date.getDay();
+
 function isToday(day) {
-  const date = new Date();
-  const DAY = date.getDay();
-  const DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
   if (day == DAYS[DAY]) {
     return true;
   }
@@ -13,16 +14,21 @@ function isToday(day) {
 function setProperties(datas) {
   let totalAmount = 0;
   let setTotalAmount = document.getElementById("totalAmount");
+  let setHoverData = document.getElementsByClassName("showDataOnHover");
+  let i = 0;
   for (let data of datas) {
     const { day, amount } = data;
     const toSetProps = document.getElementById(day);
     const height = calculateHeight(amount);
     toSetProps.style.height = height + "%";
 
+    setHoverData[i].innerText = amount;
+    i++;
+
     const is_Today = isToday(day);
     if (is_Today) {
       toSetProps.style.backgroundColor = "rgb(206, 66, 27)";
-      toSetProps.setAttribute("id", "todayData")
+      toSetProps.setAttribute("id", "todayData");
     }
 
     totalAmount += amount;
@@ -62,7 +68,7 @@ function handleMode() {
     info.style.color = "green";
     conclusion.style.color = "green";
 
-    for(let day of days){
+    for (let day of days) {
       day.style.color = "white";
     }
 
@@ -76,14 +82,30 @@ function handleMode() {
     attribution.style.color = "black";
     dataBalance.style.color = "white";
     info.style.color = "white";
-    conclusion.style.color = "green";
+    conclusion.style.color = "white";
 
-    for(let day of days){
+    for (let day of days) {
       day.style.color = "black";
     }
 
     balance.style.backgroundColor = "#d55e2d";
     chart.style.backgroundColor = "#2570bb";
-    todayData.style.backgroundColor = "rgb(206, 66, 27)"
+    todayData.style.backgroundColor = "rgb(206, 66, 27)";
+  }
+}
+
+function hoverEffect(day) {
+  if (day == "todayData") {
+    document.getElementById("friData").style.visibility = "visible";
+  } else {
+    document.getElementById(day + "Data").style.visibility = "visible";
+  }
+}
+
+function cancleHover(day) {
+  if (day == "todayData") {
+    document.getElementById("satData").style.visibility = "hidden";
+  } else {
+    document.getElementById(day + "Data").style.visibility = "hidden";
   }
 }
