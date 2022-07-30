@@ -22,7 +22,7 @@ function setProperties(datas) {
     const height = calculateHeight(amount);
     toSetProps.style.height = height + "%";
 
-    setHoverData[i].innerText = amount;
+    setHoverData[i].innerText = "$" + amount;
     i++;
 
     const is_Today = isToday(day);
