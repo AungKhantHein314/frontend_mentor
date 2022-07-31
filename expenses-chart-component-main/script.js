@@ -96,7 +96,7 @@ function handleMode() {
 
 function hoverEffect(day) {
   if (day == "todayData") {
-    document.getElementById("friData").style.visibility = "visible";
+    document.getElementById(DAYS[DAY] + "Data").style.visibility = "visible";
   } else {
     document.getElementById(day + "Data").style.visibility = "visible";
   }
@@ -104,7 +104,7 @@ function hoverEffect(day) {
 
 function cancleHover(day) {
   if (day == "todayData") {
-    document.getElementById("satData").style.visibility = "hidden";
+    document.getElementById(DAYS[DAY] + "Data").style.visibility = "hidden";
   } else {
     document.getElementById(day + "Data").style.visibility = "hidden";
   }
