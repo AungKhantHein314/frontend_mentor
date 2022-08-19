@@ -48,52 +48,52 @@
     </section>
     <!-- Display Game  -->
     <section class="displayGame">
-      <div class="chooseComponent visibility">
+      <div class="chooseComponent">
         <img class="pentagon" src="./images/bg-pentagon.svg" alt="" srcset="">
-        <div class="scissors">
+        <div class="scissors" id="1" onclick="mainGenerator(1)">
           <img class="image" src="./images/icon-scissors.svg" alt="" srcset="">
         </div>
 
-        <div class="spock">
-          <img class="image" src="./images/icon-spock.svg" alt="" srcset="">
-        </div>
-
-        <div class="paper">
-          <img class="image" src="./images/icon-paper.svg" alt="" srcset="">
-        </div>
-
-        <div class="lizard">
+        <div class="lizard" id="2" onclick="mainGenerator(2)">
           <img class="image" src="./images/icon-lizard.svg" alt="" srcset="">
         </div>
 
-        <div class="rock">
+        <div class="paper" id="3" onclick="mainGenerator(3)">
+          <img class="image" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+
+        <div class="spock" id="4" onclick="mainGenerator(4)">
+          <img class="image" src="./images/icon-spock.svg" alt="" srcset="">
+        </div>
+
+        <div class="rock" id="5" onclick="mainGenerator(5)">
           <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
         </div>
       </div>
 
       <!-- Show Result  -->
-      <div class="showResult">
+      <div class="showResult visibility">
         <div class="player">
-          <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
+          <img class="resultImage" src="#" alt="" srcset="">
         </div>
 
         <div class="resultData">
           <div class="worl">
-            <center>YOU WIN!</center>
+            
           </div>
-          <div class="playAgain">
+          <div class="playAgain" onclick="showResultVis(0)">
             <center>PLAY AGAIN</center>
           </div>
         </div>
 
         <div class="house">
-          <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
+          <img class="resultImage" src="#" alt="" srcset="">
         </div>
       </div>
 
       <!-- Show Rules  -->
       <div class="showRules visibility">
-        <img class="close" src="./images/icon-close.svg" alt="" srcset="">
+        <img class="close" src="./images/icon-close.svg" alt="" srcset="" onclick="showRules(0)">
         <img src="./images/image-rules-bonus.svg" alt="" srcset="">
       </div>
     </section>
@@ -102,10 +102,10 @@
     <!-- attribution  -->
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/AungKhantHein314">Aung Khant Hein</a>.
     </div>
     <!-- Rules  -->
-    <div class="rules">
+    <div class="rules" onclick="showRules(1)">
       RULES
     </div>
   </footer>
