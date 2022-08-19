@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Rock, Paper, Scissors is a competitive game for two players. It's played by throwing one of three paper-based symbols at your opponent: scissors cut paper, rock crushes scissors, and the paper beats rock." />
+  <meta name="keywords" content="Rock, Paper, Scissors" />
+  <meta name="author" content="Su Myat Aung" />
+  <title>Rock, Paper, Scissors</title>
+
+  <!--css link -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- favicon link -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+  <!-- fontsawrsome kit  -->
+  <script src="https://kit.fontawesome.com/9f5c644af7.js" crossorigin="anonymous"></script>
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- fonts link  -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <main>
+    <h1></h1>
+    <!-- Score Board  -->
+    <section class="scoreBoard">
+      <div class="components">
+        <p>Rock</p>
+        <p>Paper</p>
+        <p>Scissors</p>
+        <p>Lizard</p>
+        <p>Spock</p>
+      </div>
+      <div class="score">
+        <h2>S C O R E</h2>
+        <center>
+          <h1 id="score">0</h1>
+        </center>
+      </div>
+    </section>
+    <!-- Display Game  -->
+    <section class="displayGame">
+      <div class="chooseComponent visibility">
+        <img class="pentagon" src="./images/bg-pentagon.svg" alt="" srcset="">
+        <div class="scissors">
+          <img class="image" src="./images/icon-scissors.svg" alt="" srcset="">
+        </div>
+
+        <div class="spock">
+          <img class="image" src="./images/icon-spock.svg" alt="" srcset="">
+        </div>
+
+        <div class="paper">
+          <img class="image" src="./images/icon-paper.svg" alt="" srcset="">
+        </div>
+
+        <div class="lizard">
+          <img class="image" src="./images/icon-lizard.svg" alt="" srcset="">
+        </div>
+
+        <div class="rock">
+          <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
+        </div>
+      </div>
+
+      <!-- Show Result  -->
+      <div class="showResult">
+        <div class="player">
+          <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
+        </div>
+
+        <div class="resultData">
+          <div class="worl">
+            <center>YOU WIN!</center>
+          </div>
+          <div class="playAgain">
+            <center>PLAY AGAIN</center>
+          </div>
+        </div>
+
+        <div class="house">
+          <img class="image" src="./images/icon-rock.svg" alt="" srcset="">
+        </div>
+      </div>
+
+      <!-- Show Rules  -->
+      <div class="showRules visibility">
+        <img class="close" src="./images/icon-close.svg" alt="" srcset="">
+        <img src="./images/image-rules-bonus.svg" alt="" srcset="">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <!-- attribution  -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <!-- Rules  -->
+    <div class="rules">
+      RULES
+    </div>
+  </footer>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

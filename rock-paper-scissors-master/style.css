@@ -1,0 +1,280 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: radial-gradient(circle farthest-side at 50% 0, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+main {
+    width: 50%;
+    margin: auto;
+}
+
+/* Score Board  */
+
+.scoreBoard {
+    height: 200px;
+    border: 3px solid rgb(113, 113, 113);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.components p {
+    font-family: "Barlow semi condensed";
+    font-size: 30px;
+    line-height: 1px;
+    margin-left: 15px;
+    font-weight: 1000;
+    color: white;
+}
+
+.score {
+    padding: 1px 20px;
+    /* height: 50%; */
+    background-color: aliceblue;
+    border-radius: 10%;
+    margin-right: 15px;
+    line-height: 10px;
+    font-family: "Barlow semi condensed";
+    color: hsl(229, 64%, 46%);
+}
+
+.score h1 {
+    font-size: 50px;
+    font-weight: 1000;
+    color: black;
+}
+
+/* Display Game  */
+.displayGame {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chooseComponent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pentagon {
+    padding: 7%;
+}
+
+.scissors {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid hsl(39, 89%, 49%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image {
+    height: 35px;
+    width: 35px;
+}
+
+.spock {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: -7%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid hsl(189, 59%, 53%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.paper {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    right: -7%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid hsl(230, 89%, 62%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.lizard {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    left: 6%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid hsl(261, 73%, 60%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rock {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80%;
+    right: 6%;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid hsl(349, 71%, 52%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Result Start */
+.showResult {
+    width: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* top: 80%; */
+    /* right: 6%; */
+    padding: 10px;
+    background-color: rgb(105, 105, 105);
+    border: 20px solid hsl(0, 1%, 16%);
+    border-radius: 50%;
+}
+
+.image {
+    height: 70px;
+    width: 70px;
+}
+
+.worl {
+    font-family: "Barlow semi condensed";
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.resultData {
+    /* width: 200px; */
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.playAgain {
+    padding: 5px 40px;
+    color: rgb(0, 108, 197);
+    background-color: aliceblue;
+    font-family: "Barlow semi condensed";
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.house {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute;
+    top: 80%;
+    right: 6%;
+    */
+    padding: 10px;
+    background-color: rgb(125, 125, 125);
+    border: 20px solid hsl(0, 0%, 24%);
+    border-radius: 50%;
+}
+/* Result End */
+
+/* Rules Start  */
+
+.showRules {
+    position: absolute;
+    background-color: rgb(55, 55, 55);
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.close {
+    background-color: rgb(216, 216, 216);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Rules End  */
+
+/* footer */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Barlow semi condensed";
+}
+
+.rules {
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+/* visibility  */
+.visibility {
+    visibility: hidden;
+}
