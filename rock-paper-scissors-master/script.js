@@ -9,6 +9,14 @@ function generateHouseId() {
   return Math.ceil(Math.random() * 5);
 }
 
+/* 
+1 -> scissors
+2 -> lizard
+3 -> paper
+4 -> spock
+5 -> rock
+*/
+
 function generateResult(playerId, houseId) {
   let resultArr = [4, 5, 1, 2, 3, 4, 5, 1, 2];
   let arr = resultArr.splice(playerId - 1, 5);
